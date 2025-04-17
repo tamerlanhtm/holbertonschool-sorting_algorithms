@@ -58,3 +58,17 @@ void quicksort(int *array, int low, int high, int size)
 	quicksort(array, partition + 1, high, size);
 }
 
+
+
+/**
+ * quick_sort - sorts an array using Quick Sort
+ * @array: pointer to the array
+ * @size: size of the array
+ * Return: void
+ */
+void quick_sort(int *array, size_t size)
+{
+	if (array == NULL || size < 2)
+		return;
+	quicksort(array, 0, size - 1, size);
+}
